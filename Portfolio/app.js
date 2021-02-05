@@ -1,18 +1,18 @@
-function navAppear(){
-    const introText = document.querySelector('.list4')
-    const navbar = document.querySelector('.hidden-navbar')
-    const introPosition = introText.getBoundingClientRect().top
-    console.log(introPosition)
-    if(introPosition < 60){
-        navbar.style.opacity = '1'
-        navbar.style.transform = 'translateY(0px)';
-    } else{
-        navbar.style.opacity = '0'
-        navbar.style.transform = 'translateY(-85px)'
-    }
-}
+// function navAppear(){
+//     const introText = document.querySelector('.list4')
+//     const navbar = document.querySelector('.hidden-navbar')
+//     const introPosition = introText.getBoundingClientRect().top
+//     console.log(introPosition)
+//     if(introPosition < 60){
+//         navbar.style.opacity = '1'
+//         navbar.style.transform = 'translateY(0px)';
+//     } else{
+//         navbar.style.opacity = '0'
+//         navbar.style.transform = 'translateY(-85px)'
+//     }
+// }
 
-window.addEventListener('scroll', navAppear)
+// window.addEventListener('scroll', navAppear)
 
 
 

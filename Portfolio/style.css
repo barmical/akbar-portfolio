@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cardo:wght@700&family=Crimson+Text:wght@700&family=Frank+Ruhl+Libre:wght@300;400&family=Montserrat:wght@400;600&family=Nunito:wght@200;300;400;700&family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;700&display=swap');
 
 *{
     padding: 0px;
@@ -221,109 +222,104 @@ body{
 .slider2{
     background-color: #E1E9DE;
     display: grid;
+    height: 120vh;
     grid-area: slide2;
-    height: 100vh;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr 1.5fr 1fr ;
-    grid-template-areas:
-        'bar1 bar1'
-        'hola foto'
-        'nama foto'
-        'job job';
+    grid-template-areas: 'name foto';
+    grid-template-rows:none;
+    grid-template-columns: 1fr 0.4fr;
 }
 
-.bar1{
-    background: rgba(194, 194, 168, 0);
-    grid-area: bar1;
-    font-size: 20px;
-    font-family: Frank Ruhl Libre;
+.container-slider2{
+    background-color: #5F5F5F;
+    grid-area: name;
+    margin: 20px 0px 100px 60px;
+    z-index: 1;    
+    display: grid;
+    grid-template-rows: 0.6fr 1fr 0.3fr;
+    grid-template-areas: 
+    'hola'
+    'nama'
+    'see-more';
+}
+
+.hola{
+    grid-area: hola;
+    color: #E4CD88;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10%;
+    font-size: 11vw;
+    font-family: Abril Fatface;
+}
+
+.container-name{
+    grid-area: nama;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    height: 100%;
+    align-self: center;
+    margin-top: 5%;
+}
+
+.container-name h2{
+    font-size: 6vw;
+    font-family: Josefin Sans;
+    color: #F0F0F0;
+}
+
+.container-name p{
+    font-size: 3.5vw;
+    font-family: Josefin Sans;
+    font-weight: 100;
+    color: white;
+}
+
+.see-more{
+    grid-area: see-more;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 15%;
+    margin-bottom: 6%;
 }
 
-.bar1 p{
-    width: 150px;
-    height: 100px;
-    display: flex;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    background-color: rgb(253, 220, 162) ;
+.see-more p{
+    margin-bottom: 0px;
+    background-color: #C4C4C4;
+    color: black;
+    padding: 1% 3%;
+    border-radius: 5px;
+    font-family: Josefin Sans;
+    font-size: 2vw;
+    font-weight: 100;
+    cursor: pointer;
 }
 
-.hola{
-    background: rgba(216, 112, 147, 0);
-    grid-area: hola;
-    position: relative;
-    left: 20%;
-    top: 30px;
-    font-size: 10vw;
-    font-family: Crimson Text;
-    color: rgb(48, 43, 43);
-}
-
-.sub-hola{
-    z-index: 10;
-    margin-left: 10%;
-}
-
-.hola img{
+.container-slider2 img{
+    width: 25%;
     position: absolute;
-    z-index: 0;
-    width: 45%;
-    left: -350px;
-    top: -100px;
+    left: 65%;
+    top: 120%;
 }
 
-.name{
-    background: rgba(161, 117, 243, 0);
-    grid-area: nama;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 3vw;
-    font-family: Nunito;
-}
-
-
-.name .four{
-    color: rgba(36, 35, 35, 0.952);
+.bg-img{
+    background-color: #C4C4C4;
     position: relative;
-    font-weight: 200;
-    
+    display: flex;
+    align-items: flex-end;
+    z-index: 0;
+    height: 60%;
+    width: 150%;
+    right: 30%;
+    bottom: 5%;
 }
 
-.image{
-    background: rgba(252, 128, 128, 0);
+.container-bgImg{
+    display: flex;
     grid-area: foto;
-}
-
-.image img{
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-}
-
-.job{
-    background: rgba(255, 188, 120, 0);
-    grid-area: job;    
-}
-
-.job p{
-    font-family: PT Sans;
-    font-weight: bold;
-    font-size: 5vw;
-    color: rgb(53, 48, 48);
-    margin-left: 10%;
-}
-
-.job span{
-    color: #587e77 ;
+    align-items: flex-end;
 }
 
 /* -------------------- SLIDE 3 -----------------------*/
@@ -788,6 +784,14 @@ input, textarea::-webkit-input-placeholder{
         height: 30px;
     }
 
+    .bg-img{
+        height: 40%;
+    }
+
+    .container-slider2 img{
+        top: 150%;
+    }
+
     .social-img .linkedin, .social-img .instagram{
         width: 30px;
     }
@@ -830,6 +834,7 @@ input, textarea::-webkit-input-placeholder{
     .slider2{
         height: 64.5vh;
         grid-template-rows: 50px 100px 117px 100px;
+        grid-template-columns: auto;
     }
 
     .hola{
